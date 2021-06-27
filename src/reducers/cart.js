@@ -1,31 +1,62 @@
 import * as types from './../constants/ActionType';
 var data = JSON.parse(localStorage.getItem('CART'));
 
-//var initialState = data ? data:[];
-var initialState = [
-    {
-        product: {
-            id: 1,
-            name: 'Iphone 8 Plus',
-            image: 'https://i5.walmartimages.com/asr/d2593601-ce4e-4175-a732-0fe33c230b71_1.ffe07c6451044c475c78601735e2f4b1.jpeg',
-            description: 'san pham do apple san xuat',
-            price: 500,
-            inventory: 10,
-            rating: 3
-        },
-        quantity: 5
-    }
-];
-
+var initialState = data ? data:[];
 
 const cart = (state = initialState, action) => {
+    var { product, quantity} = action;
+    console.log('action',action)
+    //var index = -1;
+
     switch (action.type) {
         case types.ADD_TO_CART: {
-            console.log('action', state)
+            var index = findProductInCart(state,product);
+            //console.log('ok',state[index])
+            if(index !== -1){
+                state[index].quantity += quantity;
+            }
+            else{
+                state.push({
+                    product,
+                    quantity
+                });
+            }
+            localStorage.setItem('CART',JSON.stringify(state));
+            return [...state];
+        }
+
+        case types.DELETE_PRODUCT_IN_CART:{
+            var id = findProductInCart(state, product);
+            if(id !== -1){
+                state.splice(id, 1);
+            } 
+        }
+
+        case types.UPDATE_PRODUCT_IN_CART:{
+            index = findProductInCart(state, product);
+            if(index !== -1){
+                state[index].quantity = quantity;
+                
+            }
+            localStorage.setItem('CART', JSON.stringify(state));
             return [...state];
         }
         default: return [...state];
     }
+}
+
+var findProductInCart = (cart, product) =>{
+    var index = -1;
+    //console.log('find,',product);
+    if(cart.length>0){
+        for(var i=0; i<cart.length; i++){
+            if(cart[i].product.id===product.id){
+                index = i;
+                break; 
+            }
+        }
+    }
+    return index;
 }
 
 export default cart;

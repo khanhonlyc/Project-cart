@@ -9,15 +9,6 @@ var initialState =[
         rating: 3
     },
     {
-        id : 2,
-        name : 'Iphone 12 Pro',
-        image : 'https://canary.contestimg.wish.com/api/webimage/6012fc372ac2c1c1b022d9c3-large.jpg?cache_buster=83eb178e35826c3358ee954802362e81',
-        description : 'san pham do apple san xuat',
-        price : 1000,
-        inventory : 10,
-        rating: 5
-    },
-    {
         id : 3,
         name : 'Samsung Galaxy S20',
         image : 'https://jamobile.co.jp/wp-content/uploads/2020/12/S20-FE.jpg',

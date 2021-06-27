@@ -13,24 +13,6 @@ class Products extends Component {
             </section>
         );
     }
-
-    // showProducts(products){
-    //     var result = null;
-    //     if(products.length > 0){
-    //         result = products.map((product, index)=>{
-    //             return <Product key={index} product={product} />
-    //         });
-    //     }
-    //     return result;
-    // }
 }
-
-// const mapStateToProps = state =>{
-//     return{
-//         products: state.products
-//     }
-// }
-
-//export default connect(mapStateToProps)(Products);
 
 export default Products;
