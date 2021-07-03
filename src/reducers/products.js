@@ -1,27 +1,38 @@
+import iphone from './img/iphone.jpg';
+import sony from './img/sony.jpg';
+import oppo from './img/oppo.jpg';
+
 var initialState =[
     {
         id : 1,
-        name : 'Iphone 8 Plus',
-        image : 'https://i5.walmartimages.com/asr/d2593601-ce4e-4175-a732-0fe33c230b71_1.ffe07c6451044c475c78601735e2f4b1.jpeg',
-        description : 'san pham do apple san xuat',
-        price : 500,
-        inventory : 10,
-        rating: 3
+        name : 'iPhone 12 Pro',
+        image : iphone,
+        description : 
+        '5Gの速さ。スマートフォンで最速のA14 Bionic チップ。暗い場所で撮った写真を次のレベルへ引き上げる、Proのカメラシステム。iPhone 12 Pro Maxなら、さらにその上の性能を持つカメラが使えます',
+        price : 120000,
+        rating: 5
+    },
+    {
+        id : 2,
+        name : 'Sony XPERIA 10',
+        image : sony,
+        description : '5G対応のミドルレンジ向けSoC「Snapdragon 690 5G」を搭載。メモリーはこのクラスとしては多めな6GBで、ストレージは128GB。5GはSub-6に対応',
+        price : 53000,
+        rating: 4
     },
     {
         id : 3,
-        name : 'Samsung Galaxy S20',
-        image : 'https://jamobile.co.jp/wp-content/uploads/2020/12/S20-FE.jpg',
-        description : 'san pham do samsung san xuat',
-        price : 300,
-        inventory : 10,
-        rating: 4
+        name : 'OPPO Reno5',
+        image : oppo,
+        description : '【CPU】MediaTek Dimensity 1000+ (5G対応、Cortex-A77 x4 + Cortex-A55 x4 8コア, 2.6 GHz); 【GPU】Mali-G77 MC9; 【OS】ColorOS 7.2 (Android 11ベース); 【メモリ】8GB / 12GB; 【ストーレージ】128GB / 256GB',
+        price : 42000,
+        rating: 2
     }
 
 ];
 
 const products = (state = initialState, action) =>{
-    //console.log('action',action);
+
     switch(action.type){
         default : return [...state];
     }

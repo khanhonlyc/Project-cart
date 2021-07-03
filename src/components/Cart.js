@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-//import CartItem from './CartItem';
-//import CardResult from './CardResult';
 
 class Cart extends Component {
     render() {
@@ -12,10 +10,10 @@ class Cart extends Component {
                         <thead>
                             <tr>
                                 <th></th>
-                                <th>Sản Phẩm</th>
-                                <th>Giá</th>
-                                <th>Số Lượng</th>
-                                <th>Tổng Cộng</th>
+                                <th>製品名</th>
+                                <th>価格</th>
+                                <th>数量</th>
+                                <th>合計</th>
                                 <th></th>
                             </tr>
                         </thead>

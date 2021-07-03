@@ -5,13 +5,10 @@ var initialState = data ? data:[];
 
 const cart = (state = initialState, action) => {
     var { product, quantity} = action;
-    console.log('action',action)
-    //var index = -1;
 
     switch (action.type) {
         case types.ADD_TO_CART: {
             var index = findProductInCart(state,product);
-            //console.log('ok',state[index])
             if(index !== -1){
                 state[index].quantity += quantity;
             }
@@ -47,7 +44,6 @@ const cart = (state = initialState, action) => {
 
 var findProductInCart = (cart, product) =>{
     var index = -1;
-    //console.log('find,',product);
     if(cart.length>0){
         for(var i=0; i<cart.length; i++){
             if(cart[i].product.id===product.id){

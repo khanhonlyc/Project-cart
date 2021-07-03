@@ -9,8 +9,7 @@ import {actDeleteProductInCart, actChangeMessage, actUpdateProductInCart} from '
 
 class CartContainer extends Component {
     render() {
-        var cart = this.props.cart;
-        //var { cart } = this.props;
+        var { cart } = this.props;
         return (
             <Cart>
                 {this.showCartItem(cart)}

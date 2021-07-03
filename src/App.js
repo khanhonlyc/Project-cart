@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
-//import Products from './components/Products';
 import MessageContainer from './containers/MessageContainer';
-// import Cart from './components/Cart';
 import CartContainer from './containers/CartContainer';
 import Footer from './components/Footer';
 import ProductsContainer from './containers/ProductsContainer';

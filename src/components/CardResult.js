@@ -8,18 +8,13 @@ class CardResult extends Component {
                 <td colSpan="3"></td>
                 <td>
                     <h4>
-                        <strong>Tổng Tiền</strong>
+                        <strong>すべて合計</strong>
                     </h4>
                 </td>
                 <td>
                     <h4>
-                        <strong>{this.showTotalAmount(cart)}$</strong>
+                        <strong>{this.showTotalAmount(cart)} ¥</strong>
                     </h4>
-                </td>
-                <td colSpan="3">
-                    <button type="button" className="btn btn-primary waves-effect waves-light">Complete purchase
-                                            <i className="fa fa-angle-right right"></i>
-                    </button>
                 </td>
             </tr>
         );

@@ -8,15 +8,12 @@ class CartItem extends Component {
         super(props);
         this.state = {
             quantity : 1
-            //quantity: this.props.item.quantity
         }
     }
 
     render() {
         var { item } = this.props;
-        //var { quantity }  = this.state; 
         var { quantity} = item.quantity> 0 ?  item : this.state;
-        //console.log('quantity',item);
 
         return (
             <tr>
@@ -29,7 +26,7 @@ class CartItem extends Component {
                         <strong>{item.product.name}</strong>
                     </h5>
                 </td>
-                <td>{item.product.price}$</td>
+                <td>{item.product.price} ¥</td>
                 <td className="center-on-small-only">
                     <span className="qty">{quantity} </span>
                     <div className="btn-group radio-group" data-toggle="buttons">
@@ -47,7 +44,7 @@ class CartItem extends Component {
                         </label>
                     </div>
                 </td>
-                <td> {item.product.price * item.quantity} $</td>
+                <td> {item.product.price * item.quantity} ¥</td>
                 <td>
                     <button
                         type="button"
@@ -69,12 +66,10 @@ class CartItem extends Component {
             })
         this.props.OnUpdateProductInCart(product, quantity);
         }
-        // this.setState({
-        //     quantity : quantity})
     }
 
     DeleteProduct = (product) => {
-        this.props.OndeleteInCart(product);
+        this.props.OnDeleteInCart(product);
         this.props.OnChangeMessage(MessageDetete.MSG_DELETE_PRODUCT_IN_CART_SUCCESS);
     }
 }

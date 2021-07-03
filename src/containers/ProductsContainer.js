@@ -36,7 +36,7 @@ class ProductsContainer extends Component {
     }
 }
 
-//xcd
+
 ProductsContainer.propTypes={
     products: PropTypes.arrayOf(
         PropTypes.shape({
@@ -48,8 +48,7 @@ ProductsContainer.propTypes={
             inventory : PropTypes.number.isRequired,
             rating : PropTypes.number
         })
-    ).isRequired,
-    //onChangeMessage : PropTypes.func.isRequired
+    ).isRequired
 }
 
 const mapStateToProps = state =>{
