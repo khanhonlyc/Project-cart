@@ -7,10 +7,8 @@ import {actAddToCart, actChangeMessage} from '../actions/index'
 
 class ProductsContainer extends Component {
     render() {
-        //var { products } = this.props;
         var products = this.props.products;
 
-        //console.log('Container',products);
         return (
             <Products>
                 {this.showProducts(products)}
